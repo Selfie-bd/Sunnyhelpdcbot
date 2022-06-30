@@ -81,7 +81,7 @@ RUN git clone -b shiken https://github.com/AnimeKaizoku/LaylaRobot /root/LaylaRo
 WORKDIR /root/LaylaRobot
 
 #Copy config file to /root/LaylaRobot/LaylaRobot
-COPY ./LaylaRobot/sample_config.py ./LaylaRobot/config.py* /root/LaylaRobot/LaylaRobot/
+COPY ./LaylaRobot/config.py ./LaylaRobot/config.py* /root/LaylaRobot/LaylaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -149,7 +149,7 @@ RUN git clone -b shiken https://github.com/AnimeKaizoku/SaitamaRobot /root/Saita
 WORKDIR /root/SaitamaRobot
 
 #Copy config file to /root/SaitamaRobot/SaitamaRobot
-COPY ./SaitamaRobot/sample_config.py ./SaitamaRobot/config.py* /root/SaitamaRobot/SaitamaRobot/
+COPY ./SaitamaRobot/config.py ./SaitamaRobot/config.py* /root/SaitamaRobot/SaitamaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
