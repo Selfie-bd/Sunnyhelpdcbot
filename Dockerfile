@@ -148,8 +148,8 @@ RUN pip3 install --upgrade pip setuptools
 RUN git clone -b shiken https://github.com/Selfie-bd/Sunnyhelpdcbot /root/Sunnyhelpdcbot
 WORKDIR /root/Sunnyhelpdcbot
 
-#Copy config file to /root/Sunnyhelpdcbot/SaitamaRobot
-COPY ./SaitamaRobot/config.py ./SaitamaRobot/config.py* /root/Sunnyhelpdcbot/SaitamaRobot/
+#Copy config file to /root/Sunnyhelpdcbot/LaylaRobot
+COPY ./LaylaRobot/config.py ./LaylaRobot/config.py* /root/Sunnyhelpdcbot/LaylaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -157,4 +157,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","SaitamaRobot"]
+CMD ["python3","-m","LaylaRobot"]
