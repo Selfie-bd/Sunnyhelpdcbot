@@ -76,12 +76,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/LaylaRobot
-RUN git clone -b shiken https://github.com/AnimeKaizoku/LaylaRobot /root/LaylaRobot
-WORKDIR /root/LaylaRobot
+# Copy Python Requirements to /root/Sunnyhelpdcbot
+RUN git clone -b shiken https://github.com/Selfie-bd/Sunnyhelpdcbot /root/Sunnyhelpdcbot
+WORKDIR /root/Sunnyhelpdcbot
 
-#Copy config file to /root/LaylaRobot/LaylaRobot
-COPY ./LaylaRobot/config.py ./LaylaRobot/config.py* /root/LaylaRobot/LaylaRobot/
+#Copy config file to /root/Sunnyhelpdcbot/LaylaRobot
+COPY ./LaylaRobot/config.py ./LaylaRobot/config.py* /root/Sunnyhelpdcbot/LaylaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -145,11 +145,11 @@ CMD ["python3","-m","LaylaRobot"]
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/SaitamaRobot
-RUN git clone -b shiken https://github.com/AnimeKaizoku/SaitamaRobot /root/SaitamaRobot
-WORKDIR /root/SaitamaRobot
+RUN git clone -b shiken https://github.com/Selfie-bd/Sunnyhelpdcbot /root/Sunnyhelpdcbot
+WORKDIR /root/Sunnyhelpdcbot
 
-#Copy config file to /root/SaitamaRobot/SaitamaRobot
-COPY ./SaitamaRobot/config.py ./SaitamaRobot/config.py* /root/SaitamaRobot/SaitamaRobot/
+#Copy config file to /root/Sunnyhelpdcbot/SaitamaRobot
+COPY ./SaitamaRobot/config.py ./SaitamaRobot/config.py* /root/Sunnyhelpdcbot/SaitamaRobot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
